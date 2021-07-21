@@ -5,6 +5,7 @@ import stripes from '../assets/images/stripes.svg';
 const GlobalStyles = createGlobalStyle`
   :root {
     --red: #FF4949;
+    --tomato: #e6553b;
     --black: #111827;
     --yellow: #FDE68A;
     --pale-yellow: #f3e5bf;
@@ -14,14 +15,12 @@ const GlobalStyles = createGlobalStyle`
     --dark-brown: #211f1e;
   }
   html {
-    background-image: url(${bg});
-    background-size: 450px;
-    background-attachment: fixed;
     font-size: 10px;
   }
 
   body {
     font-size: 2rem;
+    background-color: var(--dark-brown);
   }
 
   fieldset {
@@ -30,11 +29,11 @@ const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    background: var(--red);
-    color: white;
+    background: var(--tomato);
+    color: var(---pale-yellow);
     border: 0;
-    padding: 0.6rem 1rem;
-    border-radius: 2px;
+    padding: 0.25em 1.25em 0.125em;
+    border-radius: .25em;
     cursor: pointer;
     --cast: 2px;
     box-shadow: var(--cast) var(--cast) 0 var(--grey);
@@ -56,15 +55,15 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--red) var(--white);
+    scrollbar-color: var(--pale-yellow) var(--dark-brown);
   }
   body::-webkit-scrollbar-track {
-    background: var(--white);
+    background: var(--dark-brown);
   }
   body::-webkit-scrollbar-thumb {
-    background-color: var(--red) ;
+    background-color: var(--pale-yellow) ;
     border-radius: 6px;
-    border: 3px solid var(--white);
+    border: 3px solid var(--dark-brown);
   }
 
   hr {
@@ -82,6 +81,10 @@ const GlobalStyles = createGlobalStyle`
     transform: rotate(-2deg);
     position: relative;
     display: inline-block;
+  }
+
+  .pale-yellow {
+    color: var(--pale-yellow)
   }
 `;
 

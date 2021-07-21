@@ -23,8 +23,8 @@ const Typography = createGlobalStyle`
   }
   h1,h2,h3,h4,h5,h6 {
     font-family: ITCSerifGothic, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: normal;
     margin: 0;
+    text-transform: uppercase;
   }
   a {
     color: var(--pale-yellow);
