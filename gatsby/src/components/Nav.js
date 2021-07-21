@@ -1,55 +1,36 @@
-import React from "react";
-import { Link } from "gatsby";
-import styled from "styled-components";
-import Logo from "./Logo";
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import Logo from './Logo';
+import Container from './Container';
 
 const NavStyles = styled.nav`
-  /* margin-bottom: 3rem; */
-
-  .logo {
-    transform: translateY(-25%);
-  }
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 0.5rem 0;
 
   ul {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    text-align: center;
-    list-style: none;
-
-    grid-template-columns: 1fr 1fr auto 1fr 1fr;
-    grid-gap: 2rem;
+    border-bottom: 2px solid var(--pale-yellow);
+    border-top: 2px solid var(--pale-yellow);
+    margin-top: 2rem;
+    padding: 0.5rem 0;
+    display: flex;
     align-items: center;
-
-    margin-top: -6rem;
+    justify-content: space-between;
+    list-style: none;
   }
 
   li {
-    --rotate: -2deg;
-    transform: rotate(var(--rotate));
-    order: 1;
-    &:nth-child(1) {
-      --rotate: 1deg;
-    }
-    &:nth-child(2) {
-      --rotate: -2.5deg;
-    }
-    &:nth-child(4) {
-      --rotate: 2.5deg;
-    }
-
-    &:hover {
-      --rotate: 3deg;
-    }
+    padding: 0 2rem;
   }
 
   a {
     font-size: 3rem;
     text-decoration: none;
     display: block;
+    transition: all 0.3s ease;
 
     &:hover {
-      color: var(--red);
+      text-shadow: 2px 2px 0px var(--tomato);
     }
 
     @media (max-width: 800px) {
@@ -91,25 +72,30 @@ const NavStyles = styled.nav`
 export default function Nav() {
   return (
     <NavStyles>
-      <ul>
-        <li>
-          <Link to="/">Hot Now</Link>
-        </li>
-        <li>
-          <Link to="/pizzas">Pizza Menu</Link>
-        </li>
-        <li className="logo-item">
+      <Container>
+        <Link to="/">
+          <Logo />
+        </Link>
+        <ul>
+          <li>
+            <Link to="/">On Tap</Link>
+          </li>
+          <li>
+            <Link to="/pizzas">Brew Menu</Link>
+          </li>
+          {/* <li className="logo-item">
           <Link to="/">
-            <Logo />
+          <Logo />
           </Link>
-        </li>
-        <li>
-          <Link to="/slicemasters">Slicemasters</Link>
-        </li>
-        <li>
-          <Link to="/order">Order Ahead!</Link>
-        </li>
-      </ul>
+        </li> */}
+          <li>
+            <Link to="/slicemasters">Brewmasters</Link>
+          </li>
+          <li>
+            <Link to="/order">Order Ahead!</Link>
+          </li>
+        </ul>
+      </Container>
     </NavStyles>
   );
 }

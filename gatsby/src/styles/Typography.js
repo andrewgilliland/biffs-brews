@@ -15,9 +15,9 @@ const Typography = createGlobalStyle`
   }
 
   html {
-    
-    color: var(--black);
+    /* color: var(--black); */
   }
+
   p, li {
     font-family: ProximaNova, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }

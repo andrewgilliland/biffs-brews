@@ -13,6 +13,8 @@ const GlobalStyles = createGlobalStyle`
     --grey: #efefef;
     --blue: #2563EB;
     --dark-brown: #211f1e;
+
+    --container-width: 1024px;
   }
   html {
     font-size: 10px;
