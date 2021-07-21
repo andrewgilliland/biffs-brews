@@ -6,13 +6,13 @@ import { HomePageGrid } from '../styles/Grids';
 import useLatestData from '../utils/useLatestData';
 import ItemGrid from '../components/ItemGrid';
 
-function CurrentlySlicing({ slicemasters }) {
+function CurrentlyTapping({ slicemasters }) {
   return (
     <div>
       <h2 className="center">
-        <span className="mark tilt">Slicemasters On</span>
+        <span className="mark">Brewmasters On</span>
       </h2>
-      <p>Standing by, ready to slice you up!</p>
+      <p className="pale-yellow">Standing by, ready to fill you up!</p>
       {!slicemasters && <LoadingGrid count={4} />}
       {slicemasters && !slicemasters?.length && (
         <p>No one is working right now!</p>
@@ -22,13 +22,13 @@ function CurrentlySlicing({ slicemasters }) {
   );
 }
 
-function HotSlices({ hotSlices }) {
+function ColdBrews({ hotSlices }) {
   return (
     <div>
       <h2 className="center">
-        <span className="mark tilt">Hot Slices</span>
+        <span className="mark">Cold Brews</span>
       </h2>
-      <p>Come on by, buy the slice!</p>
+      <p className="pale-yellow">Come and get 'em real frosty!</p>
       {!hotSlices && <LoadingGrid count={4} />}
       {hotSlices && !hotSlices?.length && <p>Nothin' in the Case</p>}
       {hotSlices?.length && <ItemGrid items={hotSlices} />}
@@ -47,8 +47,8 @@ export default function HomePage() {
           <h1 className="pale-yellow">The Best Brews Around!</h1>
           <p className="pale-yellow">Open 10am to 10pm Every Single Day</p>
           <HomePageGrid>
-            <CurrentlySlicing slicemasters={slicemaster} />
-            <HotSlices hotSlices={hotSlices} />
+            <CurrentlyTapping slicemasters={slicemaster} />
+            <ColdBrews hotSlices={hotSlices} />
           </HomePageGrid>
         </div>
       </Container>

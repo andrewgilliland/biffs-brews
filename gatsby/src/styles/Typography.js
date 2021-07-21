@@ -37,15 +37,11 @@ const Typography = createGlobalStyle`
     padding: 0 2px 2px 2px;
     margin: 0;
     display: inline;
-    line-height: 1;
+    line-height: .8;
   }
 
   .center {
     text-align: center;
-  }
-
-  .tilt {
-    transform: rotate(-2deg);
   }
 `;
 
