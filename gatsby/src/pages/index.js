@@ -8,7 +8,7 @@ import ItemGrid from '../components/ItemGrid';
 
 function CurrentlyTapping({ slicemasters }) {
   return (
-    <div>
+    <div className="margin-top-5">
       <h2 className="center">
         <span className="mark">Brewmasters On</span>
       </h2>
@@ -24,7 +24,7 @@ function CurrentlyTapping({ slicemasters }) {
 
 function ColdBrews({ hotSlices }) {
   return (
-    <div>
+    <div className="margin-top-5">
       <h2 className="center">
         <span className="mark">Cold Brews</span>
       </h2>
@@ -47,8 +47,8 @@ export default function HomePage() {
           <h1 className="pale-yellow">The Best Brews Around!</h1>
           <p className="pale-yellow">Open 10am to 10pm Every Single Day</p>
           <HomePageGrid>
-            <CurrentlyTapping slicemasters={slicemaster} />
             <ColdBrews hotSlices={hotSlices} />
+            <CurrentlyTapping slicemasters={slicemaster} />
           </HomePageGrid>
         </div>
       </Container>

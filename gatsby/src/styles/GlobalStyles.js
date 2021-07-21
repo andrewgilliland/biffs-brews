@@ -88,6 +88,14 @@ const GlobalStyles = createGlobalStyle`
   .pale-yellow {
     color: var(--pale-yellow)
   }
+
+  .margin-top-1 {
+    margin-top: 1rem;
+  }
+
+  .margin-top-5 {
+    margin-top: 5rem;
+  }
 `;
 
 export default GlobalStyles;
