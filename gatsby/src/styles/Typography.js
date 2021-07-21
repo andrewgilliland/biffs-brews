@@ -1,26 +1,34 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
-import font from "../assets/fonts/frenchfries.woff";
+import font from '../assets/fonts/itc-serif-gothic-lt-heavy.ttf';
+import sansSerif from '../assets/fonts/ProximaNova-Regular.otf';
 
 const Typography = createGlobalStyle`
   @font-face {
-    font-family: FrenchFries;
+    font-family: ITCSerifGothic;
     src: url(${font});
   }
+
+  @font-face {
+    font-family: ProximaNova;
+    src: url(${sansSerif});
+  }
+
   html {
-    font-family: FrenchFries, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
     color: var(--black);
   }
   p, li {
-    letter-spacing: 0.5px;
+    font-family: ProximaNova, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   h1,h2,h3,h4,h5,h6 {
+    font-family: ITCSerifGothic, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: normal;
     margin: 0;
   }
   a {
-    color: var(--black);
-    text-decoration-color: var(--red);
+    color: var(--pale-yellow);
+    text-decoration-color: var(--blue);
     /* Chrome renders this weird with this font, so we turn it off */
     text-decoration-skip-ink: none;
   }

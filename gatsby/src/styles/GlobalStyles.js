@@ -1,14 +1,17 @@
-import { createGlobalStyle } from "styled-components";
-import bg from "../assets/images/bg.svg";
-import stripes from "../assets/images/stripes.svg";
+import { createGlobalStyle } from 'styled-components';
+import bg from '../assets/images/bg.svg';
+import stripes from '../assets/images/stripes.svg';
 
 const GlobalStyles = createGlobalStyle`
   :root {
     --red: #FF4949;
-    --black: #2E2E2E;
-    --yellow: #ffc600;
+    --black: #111827;
+    --yellow: #FDE68A;
+    --pale-yellow: #f3e5bf;
     --white: #fff;
     --grey: #efefef;
+    --blue: #2563EB;
+    --dark-brown: #211f1e;
   }
   html {
     background-image: url(${bg});

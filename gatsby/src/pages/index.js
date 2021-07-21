@@ -42,8 +42,8 @@ export default function HomePage() {
     <>
       <SEO title="Home" />
       <div className="center">
-        <h1>The Best Pizza Downtown!</h1>
-        <p>Open 11am to 11pm Every Single Day</p>
+        <h1>The Best Brews Around!</h1>
+        <p>Open 10am to 10pm Every Single Day</p>
         <HomePageGrid>
           <CurrentlySlicing slicemasters={slicemaster} />
           <HotSlices hotSlices={hotSlices} />
