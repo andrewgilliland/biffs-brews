@@ -1,6 +1,7 @@
 import React from 'react';
 import LoadingGrid from '../components/LoadingGrid';
 import SEO from '../components/SEO';
+import Container from '../components/Container';
 import { HomePageGrid } from '../styles/Grids';
 import useLatestData from '../utils/useLatestData';
 import ItemGrid from '../components/ItemGrid';
@@ -41,14 +42,16 @@ export default function HomePage() {
   return (
     <>
       <SEO title="Home" />
-      <div className="center">
-        <h1 className="pale-yellow">The Best Brews Around!</h1>
-        <p className="pale-yellow">Open 10am to 10pm Every Single Day</p>
-        <HomePageGrid>
-          <CurrentlySlicing slicemasters={slicemaster} />
-          <HotSlices hotSlices={hotSlices} />
-        </HomePageGrid>
-      </div>
+      <Container>
+        <div className="center">
+          <h1 className="pale-yellow">The Best Brews Around!</h1>
+          <p className="pale-yellow">Open 10am to 10pm Every Single Day</p>
+          <HomePageGrid>
+            <CurrentlySlicing slicemasters={slicemaster} />
+            <HotSlices hotSlices={hotSlices} />
+          </HomePageGrid>
+        </div>
+      </Container>
     </>
   );
 }

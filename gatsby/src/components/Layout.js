@@ -6,15 +6,17 @@ import 'normalize.css';
 import GlobalStyles from '../styles/GlobalStyles';
 import Typography from '../styles/Typography';
 
+const PageWrapper = styled.div`
+  margin: 5rem 0;
+`;
+
 export default function Layout({ children }) {
   return (
     <>
       <GlobalStyles />
       <Typography />
-
       <Nav />
-      {children}
-
+      <PageWrapper>{children}</PageWrapper>
       <Footer />
     </>
   );

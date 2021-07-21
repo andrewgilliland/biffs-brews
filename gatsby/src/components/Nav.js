@@ -5,7 +5,7 @@ import Logo from './Logo';
 import Container from './Container';
 
 const NavStyles = styled.nav`
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: var(--dark-brown);
   padding: 0.5rem 0;
 
   ul {

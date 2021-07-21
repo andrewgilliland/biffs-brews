@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import bg from '../assets/images/bg.svg';
 import stripes from '../assets/images/stripes.svg';
 
 const GlobalStyles = createGlobalStyle`
@@ -13,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
     --grey: #efefef;
     --blue: #2563EB;
     --dark-brown: #211f1e;
+    --stain-train-brown: #262422;
 
     --container-width: 1024px;
   }
@@ -22,7 +22,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-size: 2rem;
-    background-color: var(--dark-brown);
+    background-color: var(--stain-train-brown);
   }
 
   fieldset {
