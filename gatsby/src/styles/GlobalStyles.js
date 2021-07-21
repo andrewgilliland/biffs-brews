@@ -14,6 +14,9 @@ const GlobalStyles = createGlobalStyle`
     --dark-brown: #211f1e;
     --stain-train-brown: #262422;
 
+    --font-serif: ITCSerifGothic, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-sans: ProximaNova, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
     --container-width: 1024px;
   }
   html {

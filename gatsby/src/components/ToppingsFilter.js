@@ -1,6 +1,6 @@
-import React from "react";
-import { graphql, Link, useStaticQuery } from "gatsby";
-import styled from "styled-components";
+import React from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby';
+import styled from 'styled-components';
 
 const ToppingsStyles = styled.div`
   display: flex;
@@ -9,12 +9,13 @@ const ToppingsStyles = styled.div`
   margin-bottom: 4rem;
 
   a {
+    font-family: var(--font-sans);
     display: grid;
     grid-template-columns: auto 1fr;
     grid-gap: 0 1rem;
     align-items: center;
     padding: 5px;
-    background: var(--grey);
+    background: var(--tomato);
     border-radius: 2px;
     text-decoration: none;
     font-size: clamp(1.5rem, 1.4vw, 2.5rem);
@@ -24,7 +25,7 @@ const ToppingsStyles = styled.div`
       padding: 2px 5px;
     }
 
-    &[aria-current="page"] {
+    &[aria-current='page'] {
       background: var(--yellow);
     }
   }
@@ -96,7 +97,7 @@ export default function ToppingsFilter({ activeTopping }) {
         <Link
           to={`/topping/${topping.name}`}
           key={topping.id}
-          className={topping.name === activeTopping ? "active" : ""}
+          className={topping.name === activeTopping ? 'active' : ''}
         >
           <span className="name">{topping.name}</span>
           <span className="count">{topping.count}</span>
