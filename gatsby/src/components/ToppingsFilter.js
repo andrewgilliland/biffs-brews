@@ -21,12 +21,13 @@ const ToppingsStyles = styled.div`
     font-size: clamp(1.5rem, 1.4vw, 2.5rem);
 
     .count {
-      background: white;
+      background: var(--stain-train-brown);
+      border-radius: 2px;
       padding: 2px 5px;
     }
 
     &[aria-current='page'] {
-      background: var(--yellow);
+      background: var(--green);
     }
   }
 `;

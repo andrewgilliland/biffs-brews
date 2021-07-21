@@ -5,14 +5,15 @@ const GlobalStyles = createGlobalStyle`
   :root {
     --red: #FF4949;
     --tomato: #e6553b;
-    --black: #111827;
     --yellow: #FDE68A;
     --pale-yellow: #f3e5bf;
-    --white: #fff;
-    --grey: #efefef;
     --blue: #2563EB;
-    --dark-brown: #211f1e;
+    --green: #00938e;
     --stain-train-brown: #262422;
+    --dark-brown: #211f1e;
+    --black: #111827;
+    --grey: #efefef;
+    --white: #fff;
 
     --font-serif: ITCSerifGothic, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --font-sans: ProximaNova, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
