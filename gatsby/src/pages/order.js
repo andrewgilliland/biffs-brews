@@ -114,7 +114,7 @@ export default function OrdersPage({ data }) {
               />
             </div>
           </fieldset>
-          <fieldset disabled={loading}>
+          <fieldset className="total" disabled={loading}>
             <h3>
               Your Total is {formatMoney(calculateOrderTotal(order, pizzas))}
             </h3>

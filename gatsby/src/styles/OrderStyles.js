@@ -4,7 +4,7 @@ const OrderStyles = styled.form`
   color: var(--pale-yellow);
   font-family: var(--font-sans);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
 
   input {
@@ -17,15 +17,20 @@ const OrderStyles = styled.form`
   fieldset {
     border: 2px solid var(--pale-yellow);
     border-radius: var(--border-radius);
-    grid-column: span 2;
-    max-height: 675px;
+    grid-column: span 4;
+    /* max-height: 675px; */
+    max-height: 550px;
     display: grid;
     gap: 1rem;
     align-content: start;
 
     &.order,
     &.menu {
-      grid-column: span 1;
+      grid-column: span 2;
+    }
+
+    &.total {
+      grid-column: span 2 / 3;
     }
   }
 
@@ -33,7 +38,8 @@ const OrderStyles = styled.form`
   .inner-order {
     border: 2px solid var(--pale-yellow);
     border-radius: var(--border-radius);
-    height: 580px;
+    /* height: 580px; */
+    height: 475px;
     overflow: auto;
     display: grid;
     gap: 1rem;
