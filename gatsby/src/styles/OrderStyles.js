@@ -1,13 +1,24 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const OrderStyles = styled.form`
+  color: var(--pale-yellow);
+  font-family: var(--font-sans);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 
+  input {
+    background-color: var(--pale-yellow);
+    border: none;
+    border-radius: var(--border-radius);
+    width: 300px;
+  }
+
   fieldset {
+    border: 2px solid var(--pale-yellow);
+    border-radius: var(--border-radius);
     grid-column: span 2;
-    max-height: 600px;
+    max-height: 675px;
     display: grid;
     gap: 1rem;
     align-content: start;
@@ -20,7 +31,8 @@ const OrderStyles = styled.form`
 
   .inner-menu,
   .inner-order {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--pale-yellow);
+    border-radius: var(--border-radius);
     height: 580px;
     overflow: auto;
     display: grid;
@@ -35,13 +47,13 @@ const OrderStyles = styled.form`
 
   .inner-menu::-webkit-scrollbar-track,
   .inner-order::-webkit-scrollbar-track {
-    background: var(--white);
+    background: var(--pale-yellow);
   }
   .inner-menu::-webkit-scrollbar-thumb,
   .inner-order::-webkit-scrollbar-thumb {
-    background-color: var(--red);
+    background-color: var(--tomato);
     border-radius: 6px;
-    border: 3px solid var(--white);
+    border: 2px solid var(--pale-yellow);
   }
 
   .mapleSyrup {

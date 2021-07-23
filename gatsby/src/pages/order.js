@@ -1,23 +1,24 @@
-import { graphql } from "gatsby";
-import React from "react";
-import Img from "gatsby-image";
-import SEO from "../components/SEO";
-import useForm from "../utils/useForm";
-import usePizza from "../utils/usePizza";
-import calculatePizzaPrice from "../utils/calculatePizzaPrice";
-import formatMoney from "../utils/formatMoney";
-import OrderStyles from "../styles/OrderStyles";
-import MenuItemStyles from "../styles/MenuItemStyles";
-import PizzaOrder from "../components/PizzaOrder";
-import calculateOrderTotal from "../utils/calculateOrderTotal";
+import { graphql } from 'gatsby';
+import React from 'react';
+import Img from 'gatsby-image';
+import SEO from '../components/SEO';
+import Container from '../components/Container';
+import useForm from '../utils/useForm';
+import usePizza from '../utils/usePizza';
+import calculatePizzaPrice from '../utils/calculatePizzaPrice';
+import formatMoney from '../utils/formatMoney';
+import OrderStyles from '../styles/OrderStyles';
+import MenuItemStyles from '../styles/MenuItemStyles';
+import PizzaOrder from '../components/PizzaOrder';
+import calculateOrderTotal from '../utils/calculateOrderTotal';
 
 export default function OrdersPage({ data }) {
   const pizzas = data.pizzas.nodes;
 
   const { values, updateValue } = useForm({
-    name: "",
-    email: "",
-    mapleSyrup: "",
+    name: '',
+    email: '',
+    mapleSyrup: '',
   });
 
   const {
@@ -38,90 +39,92 @@ export default function OrdersPage({ data }) {
   }
   return (
     <>
-      <SEO title="Order a Pizza!" />
-      <OrderStyles onSubmit={submitOrder}>
-        <fieldset disabled={loading}>
-          <legend>Your Info</legend>
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={values.name}
-            onChange={updateValue}
-          />
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            value={values.email}
-            onChange={updateValue}
-          />
-          <input
-            type="mapleSyrup"
-            name="mapleSyrup"
-            id="mapleSyrup"
-            value={values.mapleSyrup}
-            onChange={updateValue}
-            className="mapleSyrup"
-          />
-        </fieldset>
-        <fieldset className="menu" disabled={loading}>
-          <legend>Menu</legend>
-          <div className="inner-menu">
-            {pizzas.map((pizza) => (
-              <MenuItemStyles key={pizza.id}>
-                <Img
-                  width="100"
-                  height="100"
-                  fluid={pizza.image.asset.fluid}
-                  alt={pizza.name}
-                />
-                <div>
-                  <h2>{pizza.name}</h2>
-                </div>
-                <div>
-                  {["S", "M", "L"].map((size, index) => (
-                    <button
-                      key={index}
-                      type="button"
-                      onClick={() =>
-                        addToOrder({
-                          id: pizza.id,
-                          size,
-                        })
-                      }
-                    >
-                      {size}{" "}
-                      {formatMoney(calculatePizzaPrice(pizza.price, size))}
-                    </button>
-                  ))}
-                </div>
-              </MenuItemStyles>
-            ))}
-          </div>
-        </fieldset>
-        <fieldset className="order" disabled={loading}>
-          <legend>Order</legend>
-          <div className="inner-order">
-            <PizzaOrder
-              order={order}
-              removeFromOrder={removeFromOrder}
-              pizzas={pizzas}
+      <SEO title="Order some Brews!" />
+      <Container>
+        <OrderStyles onSubmit={submitOrder}>
+          <fieldset disabled={loading}>
+            <legend>Your Info</legend>
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              value={values.name}
+              onChange={updateValue}
             />
-          </div>
-        </fieldset>
-        <fieldset disabled={loading}>
-          <h3>
-            Your Total is {formatMoney(calculateOrderTotal(order, pizzas))}
-          </h3>
-          <div>{error ? <p>Error: {error}</p> : ""}</div>
-          <button type="submit" disabled={loading}>
-            {loading ? "Placing Order..." : "Order Ahead!"}
-          </button>
-        </fieldset>
-      </OrderStyles>
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value={values.email}
+              onChange={updateValue}
+            />
+            <input
+              type="mapleSyrup"
+              name="mapleSyrup"
+              id="mapleSyrup"
+              value={values.mapleSyrup}
+              onChange={updateValue}
+              className="mapleSyrup"
+            />
+          </fieldset>
+          <fieldset className="menu" disabled={loading}>
+            <legend>Menu</legend>
+            <div className="inner-menu">
+              {pizzas.map((pizza) => (
+                <MenuItemStyles key={pizza.id}>
+                  <Img
+                    width="100"
+                    height="100"
+                    fluid={pizza.image.asset.fluid}
+                    alt={pizza.name}
+                  />
+                  <div>
+                    <h2>{pizza.name}</h2>
+                  </div>
+                  <div>
+                    {['S', 'M', 'L'].map((size, index) => (
+                      <button
+                        key={index}
+                        type="button"
+                        onClick={() =>
+                          addToOrder({
+                            id: pizza.id,
+                            size,
+                          })
+                        }
+                      >
+                        {size}{' '}
+                        {formatMoney(calculatePizzaPrice(pizza.price, size))}
+                      </button>
+                    ))}
+                  </div>
+                </MenuItemStyles>
+              ))}
+            </div>
+          </fieldset>
+          <fieldset className="order" disabled={loading}>
+            <legend>Order</legend>
+            <div className="inner-order">
+              <PizzaOrder
+                order={order}
+                removeFromOrder={removeFromOrder}
+                pizzas={pizzas}
+              />
+            </div>
+          </fieldset>
+          <fieldset disabled={loading}>
+            <h3>
+              Your Total is {formatMoney(calculateOrderTotal(order, pizzas))}
+            </h3>
+            <div>{error ? <p>Error: {error}</p> : ''}</div>
+            <button type="submit" disabled={loading}>
+              {loading ? 'Placing Order...' : 'Order Ahead!'}
+            </button>
+          </fieldset>
+        </OrderStyles>
+      </Container>
     </>
   );
 }
