@@ -6,6 +6,7 @@ const ToppingsStyles = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-top: 4rem;
   margin-bottom: 4rem;
 
   a {

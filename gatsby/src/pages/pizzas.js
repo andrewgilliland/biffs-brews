@@ -12,13 +12,13 @@ export default function PizzasPage({ data, pageContext }) {
       <SEO
         title={
           pageContext.topping
-            ? `Pizzas With ${pageContext.topping}`
-            : `All Pizzas`
+            ? `Brews With ${pageContext.topping}`
+            : `All Brews`
         }
       />
       <Container>
-        <ToppingsFilter activeTopping={pageContext.topping} />
         <PizzaList pizzas={pizzas} />
+        <ToppingsFilter activeTopping={pageContext.topping} />
       </Container>
     </>
   );

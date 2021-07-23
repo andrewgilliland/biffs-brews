@@ -27,7 +27,7 @@ const Typography = createGlobalStyle`
   }
   a {
     color: var(--pale-yellow);
-    text-decoration-color: var(--blue);
+    text-decoration-color: var(--stain-train-brown);
     /* Chrome renders this weird with this font, so we turn it off */
     text-decoration-skip-ink: none;
   }
@@ -37,6 +37,7 @@ const Typography = createGlobalStyle`
     margin: 0;
     display: inline;
     line-height: .8;
+    border-radius: var(--border-radius);
   }
 
   .center {

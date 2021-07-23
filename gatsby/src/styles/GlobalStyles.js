@@ -19,6 +19,8 @@ const GlobalStyles = createGlobalStyle`
     --font-sans: ProximaNova, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
     --container-width: 1024px;
+
+    --border-radius: 2px;
   }
   html {
     font-size: 10px;
@@ -91,6 +93,14 @@ const GlobalStyles = createGlobalStyle`
 
   .pale-yellow {
     color: var(--pale-yellow)
+  }
+
+  .stain-train-brown {
+    color: var(--stain-train-brown);
+  }
+
+  .border-round {
+    border-radius: var(--border-radius);
   }
 
   .margin-top-1 {

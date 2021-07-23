@@ -25,7 +25,7 @@ export default function BeersPage({ data, pageContext }) {
 }
 
 export const query = graphql`
-  query PizzaQuery($toppingRegex: String) {
+  query BeerQuery($toppingRegex: String) {
     pizzas: allSanityPizza(
       filter: { toppings: { elemMatch: { name: { regex: $toppingRegex } } } }
     ) {
