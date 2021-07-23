@@ -5,10 +5,10 @@ dotenv.config({ path: ".env" });
 
 export default {
   siteMetadata: {
-    title: `Slicks Slices`,
-    siteUrl: `https://gatsby.pizza`,
-    description: `The best pizza place in Pensacola`,
-    twitter: `@slicksSlices`,
+    title: `Biff's Brews`,
+    siteUrl: `https://biffs-brews.netlify.app/`,
+    description: `Biff Tannen likes his beer, and he wants to share it with you`,
+    twitter: `@biffsbrews`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
