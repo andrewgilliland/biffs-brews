@@ -124,8 +124,8 @@ async function turnSlicemastersIntoPages({ graphql, actions }) {
   // 4. Loop from 1 to n and create page for them
   Array.from({ length: pageCount }).forEach((_, i) => {
     actions.createPage({
-      path: `/slicemasters/${i + 1}`,
-      component: path.resolve(`./src/pages/slicemasters.js`),
+      path: `/brewmasters/${i + 1}`,
+      component: path.resolve(`./src/pages/brewmasters.js`),
       // This data is pass to the template when we create it
       context: {
         skip: i * pageSize,

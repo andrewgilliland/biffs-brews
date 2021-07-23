@@ -33,6 +33,7 @@ const Typography = createGlobalStyle`
   }
   mark, .mark {
     background: var(--yellow);
+    color: var(--stain-train-brown);
     padding: 0 2px 2px 2px;
     margin: 0;
     display: inline;
