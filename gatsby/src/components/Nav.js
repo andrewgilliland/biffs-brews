@@ -89,7 +89,7 @@ export default function Nav() {
           </Link>
         </li> */}
           <li>
-            <Link to="/slicemasters">Brewmasters</Link>
+            <Link to="/brewmasters">Brewmasters</Link>
           </li>
           <li>
             <Link to="/order">Order Growlers!</Link>
