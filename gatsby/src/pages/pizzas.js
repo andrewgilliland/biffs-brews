@@ -1,10 +1,9 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Nav from "../components/Nav";
-import Layout from "../components/Layout";
-import PizzaList from "../components/PizzaList";
-import ToppingsFilter from "../components/ToppingsFilter";
-import SEO from "../components/SEO";
+import React from 'react';
+import { graphql } from 'gatsby';
+import Container from '../components/Container';
+import PizzaList from '../components/PizzaList';
+import ToppingsFilter from '../components/ToppingsFilter';
+import SEO from '../components/SEO';
 
 export default function PizzasPage({ data, pageContext }) {
   const pizzas = data.pizzas.nodes;
@@ -17,8 +16,10 @@ export default function PizzasPage({ data, pageContext }) {
             : `All Pizzas`
         }
       />
-      <ToppingsFilter activeTopping={pageContext.topping} />
-      <PizzaList pizzas={pizzas} />
+      <Container>
+        <ToppingsFilter activeTopping={pageContext.topping} />
+        <PizzaList pizzas={pizzas} />
+      </Container>
     </>
   );
 }
