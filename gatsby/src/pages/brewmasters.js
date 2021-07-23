@@ -48,13 +48,6 @@ export default function BrewmastersPage({ data, pageContext }) {
   return (
     <>
       <SEO title={`Brewmasters - Page ${pageContext.currentPage || 1}`} />
-      <Pagination
-        pageSize={parseInt(process.env.GATSBY_PAGE_SIZE)}
-        totalCount={data.slicemasters.totalCount}
-        currentPage={pageContext.currentPage || 1}
-        skip={pageContext.skip}
-        base="/slicemasters"
-      />
       <Container>
         <BrewmasterGrid>
           {slicemasters.map((person) => (
@@ -69,6 +62,13 @@ export default function BrewmastersPage({ data, pageContext }) {
             </BrewmasterStyles>
           ))}
         </BrewmasterGrid>
+        <Pagination
+          pageSize={parseInt(process.env.GATSBY_PAGE_SIZE)}
+          totalCount={data.slicemasters.totalCount}
+          currentPage={pageContext.currentPage || 1}
+          skip={pageContext.skip}
+          base="/brewmasters"
+        />
       </Container>
     </>
   );

@@ -3,19 +3,20 @@ import React from "react";
 import styled from "styled-components";
 
 const PaginationStyles = styled.div`
+  font-family: var(--font-sans);
   display: flex;
   align-content: center;
   align-items: center;
   justify-items: center;
   text-align: center;
-  border: 1px solid var(--grey);
+  border: 2px solid var(--pale-yellow);
   margin: 2rem 0;
   border-radius: 5px;
 
   & > * {
     padding: 1rem;
     flex: 1;
-    border-right: 1px solid var(--grey);
+    border-right: 2px solid var(--pale-yellow);
     text-decoration: none;
 
     &[aria-current],
