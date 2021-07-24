@@ -16,7 +16,7 @@ const deets = `
 
 export default function useLatestData() {
   // hot slices
-  const [hotSlices, setHotSlices] = useState();
+  const [newBrews, setNewBrews] = useState();
   // slicemasters
   const [slicemaster, setSlicemasters] = useState();
   // Use a side effect to fetch the data from the graphql endpoint
@@ -47,7 +47,7 @@ export default function useLatestData() {
       .then((res) => {
         // TODO check for errors
         // set the data to state
-        setHotSlices(res.data.StoreSettings.hotSlices);
+        setNewBrews(res.data.StoreSettings.hotSlices);
         setSlicemasters(res.data.StoreSettings.slicemaster);
       })
       .catch((err) => {
@@ -56,7 +56,7 @@ export default function useLatestData() {
       });
   }, []);
   return {
-    hotSlices,
+    newBrews,
     slicemaster,
   };
 }
