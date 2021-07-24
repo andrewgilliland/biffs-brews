@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HomePageGrid = styled.div`
   /* display: grid;
@@ -12,21 +12,25 @@ export const HomePageGrid = styled.div`
 `;
 
 export const ItemsGrid = styled.div`
+  margin-top: 3rem;
   display: grid;
   gap: 2rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
 `;
 
 // Single Grid Item (for homepage)
 export const ItemStyles = styled.div`
   text-align: center;
   position: relative;
+  border-top: 2px solid var(--pale-yellow);
+  border-radius: 2px;
+
   img {
     height: auto;
-    font-size: 0;
   }
+
   p {
-    transform: rotate(-2deg) translateY(-10px);
+    transform: translateY(-10px);
     position: absolute;
     width: 100%;
     top: 0;
@@ -35,8 +39,10 @@ export const ItemStyles = styled.div`
     font-size: 2rem;
     font-size: clamp(12px, 5vw, 20px);
   }
+
   .mark {
     display: inline;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
 
   @keyframes shine {

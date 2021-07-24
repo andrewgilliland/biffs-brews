@@ -14,9 +14,6 @@ const Typography = createGlobalStyle`
     src: url(${sansSerif});
   }
 
-  html {
-  }
-
   p, li {
     font-family: var(--font-sans);
   }
@@ -34,7 +31,7 @@ const Typography = createGlobalStyle`
   mark, .mark {
     background: var(--yellow);
     color: var(--stain-train-brown);
-    padding: 0 2px 2px 2px;
+    padding: 2px 4px;
     margin: 0;
     display: inline;
     line-height: .8;
